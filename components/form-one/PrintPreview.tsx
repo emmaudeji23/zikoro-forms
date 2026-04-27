@@ -15,28 +15,19 @@ export const PrintPreviewModal = ({
     const content = printRef.current;
     if (!content) return;
 
-    const win = window.open("", "", "width=900,height=700");
-    if (!win) return;
+    const originalBody = document.body.innerHTML;
 
-    win.document.write(`
-      <html>
-        <head>
-          <title>Print</title>
-          <style>
-            body {
-              font-family: sans-serif;
-              padding: 20px;
-            }
-          </style>
-        </head>
-        <body>
-          ${content.innerHTML}
-        </body>
-      </html>
-    `);
+    // clone node to preserve state
+    const cloned = content.cloneNode(true) as HTMLElement;
 
-    win.document.close();
-    win.print();
+    document.body.innerHTML = "";
+    document.body.appendChild(cloned);
+
+    window.print();
+
+    // restore app
+    document.body.innerHTML = originalBody;
+    window.location.reload(); // ensures React rehydrates cleanly
   };
 
   return (
@@ -55,7 +46,10 @@ export const PrintPreviewModal = ({
 
           {/* Preview */}
           <div className="flex-1 overflow-auto bg-muted p-6">
-            <div ref={printRef} className="bg-white shadow mx-auto">
+            <div
+              ref={printRef}
+              className="bg-white mx-auto shadow print:shadow-none"
+            >
               {children}
             </div>
           </div>
