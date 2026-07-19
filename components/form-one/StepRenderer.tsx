@@ -2,6 +2,7 @@
 import { useForm } from "./FormProvider"
 import Step1 from "./Step1"
 import Step2 from "./Step2"
+import Step3 from "./Step3"
 
 export const STEPS = [
   { id: "basicInfo", title: "Basic Info", description:"", instructions:"" },
@@ -15,7 +16,7 @@ export const STEPS = [
 const stepMap = [
   Step1,
   Step2,
-  () => <div>Limb (coming soon)</div>,
+  Step3,
   () => <div>Muscle (coming soon)</div>,
   () => <div>Gait (coming soon)</div>,
   () => <div>Gait (coming soon)</div>,

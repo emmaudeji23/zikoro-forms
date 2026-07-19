@@ -430,22 +430,22 @@ export const formSections: FormSectionConfig[] = [
     ],
   },
 
-  {
-    key: "mobility",
-    title: "3. Mobility",
-    schema: [
-      {
-        id: "walkingDistance",
-        name: "walkingDistance",
-        label: "Walking Distance",
-      },
-      {
-        id: "walkingTime",
-        name: "walkingTime",
-        label: "Walking Time",
-      },
-    ],
-  },
+  // {
+  //   key: "mobility",
+  //   title: "3. Mobility",
+  //   schema: [
+  //     {
+  //       id: "walkingDistance",
+  //       name: "walkingDistance",
+  //       label: "Walking Distance",
+  //     },
+  //     {
+  //       id: "walkingTime",
+  //       name: "walkingTime",
+  //       label: "Walking Time",
+  //     },
+  //   ],
+  // },
 ];
 
 
@@ -531,10 +531,15 @@ const formData: FormData = {
     // medications: "Metformin",
   },
 
-  mobility: {
-    walkingDistance: "50 meters",
-    walkingTime: "5 minutes",
-  },
+  // mobility: {
+  //   walkingDistance: "50 meters",
+  //   walkingTime: "5 minutes",
+  // },
+
+  general_diagnosis_2_1: {},
+  pain_2_2: {},
+  sensitivity_2_3: {},
+
 
   limb: {},
   muscle: {},

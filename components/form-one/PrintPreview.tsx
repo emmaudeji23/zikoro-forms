@@ -40,7 +40,7 @@ export const PrintPreviewModal = ({
         <div className="flex flex-col h-full">
 
           {/* Header */}
-          <div className="flex justify-end border-b p-4">
+          <div className="flex justify-  border-b p-4">
             <Button onClick={handlePrint}>Print</Button>
           </div>
 

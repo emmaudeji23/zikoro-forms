@@ -21,15 +21,16 @@ export const CheckboxWithInputField = ({
 }: Props) => {
   const ischecked = value.length > 1
   return (
-    <div className="flex items-center gap-3">
-      {/* CHECKBOX */}
-      <div
-        onClick={() => onValueChange(value || label)}
-        className="w-4 h-4 border border-foreground/30 flex items-center justify-center cursor-pointer"
-      >
-        {ischecked && <div className="w-2 h-2 bg-primary" />}
+    <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-3">
+        {/* CHECKBOX */}
+        <div
+          onClick={() => onValueChange(value || label)}
+          className="w-4 h-4 shrink-0 border border-muted-foreground flex items-center justify-center cursor-pointer"
+        >
+          {ischecked && <div className="w-2 h-2 bg-primary" />}
+        </div>
       </div>
-
       {/* LABEL */}
       <span className="text-sm">{label}</span>
 
@@ -48,6 +49,7 @@ export const CheckboxWithInputField = ({
           bg-transparent
         "
       />
+
     </div>
   );
 };

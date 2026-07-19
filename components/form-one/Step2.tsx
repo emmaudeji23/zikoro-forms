@@ -20,7 +20,10 @@ const Step2 = () => {
       {/* =========================
         1. GENERAL STATE OF HEALTH
       ========================= */}
-      <SectionBlock title="1. General State of Health" className="sm:grid-cols-1">
+      <SectionBlock 
+        heading="1. General State of Health"
+        title="" 
+        className="sm:grid-cols-1">
 
         <CheckboxWithInputField
           label= "Cardiovascular diseases"
@@ -31,7 +34,7 @@ const Step2 = () => {
         />
 
         <CheckboxWithInputField
-          label= "Currently taking medication"
+          label= "Circulatory disorders"
           value={data?.circulatory_disorders || ""}
           onValueChange={(val: string) =>
             updateField("health", "circulatory_disorders", val)}
@@ -75,7 +78,7 @@ const Step2 = () => {
         />
         {data.taking_medications && (
           <MultiSelectInlineField
-            label="Medication Side Effects"
+            label="If medication is being taken, what side effects does it cause?"
             value={data.sideEffects || []}
             onChange={(val: string[]) =>
               updateField("health", "sideEffects", val)
@@ -99,72 +102,72 @@ const Step2 = () => {
         2. FUNCTIONAL LIMITATIONS
       ========================= */}
   
-        <SectionBlock title="Functional Limitations" className="sm:grid-cols-1">
+      <SectionBlock title="1.2 Functional Limitations" className="sm:grid-cols-1">
 
-          <CheckboxWithInputField
-            label="Functional limitations / Complaints torso "
-            value={data.torso || ""}
-            onValueChange={(val: string) =>
-            updateField("health", "torso", val)}
-            placeholder="What are the types"
-          />
+        <CheckboxWithInputField
+          label="Functional limitations / Complaints torso "
+          value={data.torso || ""}
+          onValueChange={(val: string) =>
+          updateField("health", "torso", val)}
+          placeholder="What are the types"
+        />
 
-          <MultiSelectPills
-            label=" Functional limitations / Complaints upper extremity (Left)"
-            value={data.upperExtremity_left || []}
-            onChange={(val: string[]) =>
-              updateField("health", "upperExtremity_left", val)
-            }
-            options={[
-              { label: "Shoulder", value: "shoulder" },
-              { label: "Elbow", value: "elbow" },
-              { label: "Wrist / Hand", value: "wrist" },
-            ]}
-          />
+        <MultiSelectPills
+          label=" Functional limitations / Complaints upper extremity (Left)"
+          value={data.upperExtremity_left || []}
+          onChange={(val: string[]) =>
+            updateField("health", "upperExtremity_left", val)
+          }
+          options={[
+            { label: "Shoulder", value: "shoulder" },
+            { label: "Elbow", value: "elbow" },
+            { label: "Wrist / Hand", value: "wrist" },
+          ]}
+        />
 
-          <MultiSelectPills
-            label=" Functional limitations / Complaints Upper Extremity (Right)"
-            value={data.upperExtremity_right || []}
-            onChange={(val: string[]) =>
-              updateField("health", "upperExtremity_right", val)
-            }
-            options={[
-              { label: "Shoulder", value: "shoulder" },
-              { label: "Elbow", value: "elbow" },
-              { label: "Wrist / Hand", value: "wrist" },
-            ]}
-          />
+        <MultiSelectPills
+          label=" Functional limitations / Complaints Upper Extremity (Right)"
+          value={data.upperExtremity_right || []}
+          onChange={(val: string[]) =>
+            updateField("health", "upperExtremity_right", val)
+          }
+          options={[
+            { label: "Shoulder", value: "shoulder" },
+            { label: "Elbow", value: "elbow" },
+            { label: "Wrist / Hand", value: "wrist" },
+          ]}
+        />
 
-          <InputField
-            label=" Symptoms "
-            value={data.upperExtremity_symptoms || ""}
-            onChange={(e: any) =>
-              updateField(
-                "health",
-                "upperExtremity_symptoms",
-                e.target.value
-              )
-            }
-          />
+        <InputField
+          label=" Symptoms "
+          value={data.upperExtremity_symptoms || ""}
+          onChange={(e: any) =>
+            updateField(
+              "health",
+              "upperExtremity_symptoms",
+              e.target.value
+            )
+          }
+        />
 
-          <TextareaField 
-            label="Other illness / limitations / pain"
-            value={data.otherIssues || ""}
-            onChange={(e:any) =>
-              updateField("health", "otherIssues", e.target.value)
-            }
-          />
+        <TextareaField 
+          label="Other illness / limitations / pain"
+          value={data.otherIssues || ""}
+          onChange={(e:any) =>
+            updateField("health", "otherIssues", e.target.value)
+          }
+        />
 
-        </SectionBlock>
+      </SectionBlock>
 
  
         {/* =========================
             3. ACTIVITIES / MOBILITY
           ========================= */}
-          <SectionBlock title="Activities / Mobility" className="sm:grid-cols-1">
+          <SectionBlock title="1.3 Activities / Mobility" className="sm:grid-cols-1">
 
             <InputField
-              label="Relevant Activities"
+              label="Relevant professional / leisure activities "
               value={data?.activities || ""}
               onChange={(e: any) =>
                 updateField("health", "activities", e.target.value)
@@ -190,7 +193,7 @@ const Step2 = () => {
             {/* WALKING */}
             <div className="grid sm:grid-cols-2 gap-3">
               <InputField
-                label="Walking Distance"
+                label="Maximum walking distance at a stretch"
                 value={data?.walking_distance || ""}
                 onChange={(e: any) =>
                   updateField("health", "walking_distance", e.target.value)
@@ -198,7 +201,7 @@ const Step2 = () => {
               />
 
               <InputField
-                label="Walking Time"
+                label="Maximum walking time at a stretch  "
                 value={data?.walking_time || ""}
                 onChange={(e: any) =>
                   updateField("health", "walking_time", e.target.value)

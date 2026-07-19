@@ -18,7 +18,7 @@ export const CheckboxItem: React.FC<CheckboxItemProps> = ({
       }`}
     >
       {/* BOX */}
-      <div className="w-4 h-4 border border-foreground/30 flex items-center justify-center">
+      <div className="w-4 h-4 border border-muted-foreground flex items-center justify-center">
         {checked && <div className="w-2 h-2 bg-primary" />}
         </div>
 

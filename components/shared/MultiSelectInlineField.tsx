@@ -69,11 +69,11 @@ export const MultiSelectInlineField = ({
         <Label className="text-sm font-medium flex items-center gap-3 mb-2">
           {label}
           {required && <span className="text-destructive">*</span>}
-          <hr className="w-full" />
+          <hr className="w-auto" />
         </Label>
       )}
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-wrap gap-2">
         {options.map((opt) => {
           const checked = value.includes(opt.value);
 
@@ -86,15 +86,18 @@ export const MultiSelectInlineField = ({
             />
           );
         })}
+      </div>
+      <div>
 
         {/* ✅ Others Row */}
-        {hasOthersOption&&<label className="flex items-center gap-2">
+        {hasOthersOption &&
+        <label className="flex items-center gap-2">
           {/* BOX */}
           <div
             onClick={handleOtherToggle}
-            className="w-4 h-4 border border-gray-700 flex items-center justify-center"
+            className="w-4 h-4 border border-muted-foreground flex items-center justify-center"
           >
-            {isOtherChecked && <div className="w-2 h-2 bg-black" />}
+            {isOtherChecked && <div className="w-2 h-2 bg-primary" />}
           </div>
 
           {/* INPUT LINE */}
