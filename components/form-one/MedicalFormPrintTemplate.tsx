@@ -537,8 +537,8 @@ const formData: FormData = {
   // },
 
   general_diagnosis_2_1: {},
-  pain_2_2: {},
-  sensitivity_2_3: {},
+  // pain_2_2: {},
+  // sensitivity_2_3: {},
 
 
   limb: {},

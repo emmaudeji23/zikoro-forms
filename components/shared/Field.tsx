@@ -10,6 +10,7 @@ interface FieldProps {
   required?: boolean
   htmlFor?: string
   children: React.ReactNode
+  containerStyle?:string
 }
 
 export const Field = ({
@@ -19,9 +20,10 @@ export const Field = ({
   required,
   htmlFor,
   children,
+  containerStyle,
 }: FieldProps) => {
   return (
-    <div className="flex flex-col gap-1 w-full">
+    <div className={cn("flex flex-col gap-1 w-full", containerStyle)}>
       
       {/* Label */}
       {label && (

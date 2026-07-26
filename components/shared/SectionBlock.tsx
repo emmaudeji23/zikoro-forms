@@ -26,7 +26,7 @@ export const SectionBlock = ({
         <div className="flex-1 h-px bg-border/60" />
       </div>}
 
-      <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-2", className)}>
+      <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-4", className)}>
         {children}
       </div>
     </section>

@@ -7,7 +7,7 @@ import Step3 from "./Step3"
 export const STEPS = [
   { id: "basicInfo", title: "Basic Info", description:"", instructions:"" },
   { id: "health", title: "Health", description:"", instructions:"" },
-  { id: "mobility", title: "Mobility", description:"", instructions:"" },
+  { id: "general_diagnosis_2_1", title: "General Diagnosis", description:"", instructions:"" },
   { id: "limb", title: "Limb Details", description:"", instructions:"" },
   { id: "muscle", title: "Muscle Strength", description:"", instructions:"" },
   { id: "gait", title: "Gait Analysis", description:"", instructions:"" },
