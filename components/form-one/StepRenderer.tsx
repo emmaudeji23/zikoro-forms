@@ -1,4 +1,5 @@
 
+import MuscleFunctionForm from "../DiagramFormOverlay"
 import { useForm } from "./FormProvider"
 import Step1 from "./Step1"
 import Step2 from "./Step2"
@@ -19,7 +20,7 @@ const stepMap = [
   Step2,
   Step3,
   Step4,
-  () => <div>Gait (coming soon)</div>,
+  () => <MuscleFunctionForm />,
   () => <div>Gait (coming soon)</div>,
 ]
 
