@@ -9,7 +9,7 @@ export const STEPS = [
   { id: "basicInfo", title: "Basic Info", description:"", instructions:"" },
   { id: "health", title: "Health", description:"", instructions:"" },
   { id: "general_diagnosis_2_1", title: "General Diagnosis", description:"", instructions:"" },
-  { id: "Joint diagnosis / contractures  ", title: "Joint diagnosis / contractures  ", description:"", instructions:"" },
+  { id: "joint_diagnosis_or_contractures", title: "Joint diagnosis / contractures", description:"", instructions:"" },
   { id: "muscle", title: "Muscle Strength", description:"", instructions:"" },
   { id: "gait", title: "Gait Analysis", description:"", instructions:"" },
 ]

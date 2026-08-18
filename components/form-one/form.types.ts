@@ -6,7 +6,7 @@ export type StepKey =
   | "health"
   | "general_diagnosis_2_1"
   // | "mobility"
-  | "limb"
+  | "joint_diagnosis_or_contractures"
   | "muscle"
   | "gait"
 
@@ -76,7 +76,7 @@ export type FormData = {
   //   devices?: string[]
   // }
 
-  limb: Record<string, any>
+  // limb: Record<string, any>
   muscle: Record<string, any>
   gait: Record<string, any>
 
