@@ -537,11 +537,10 @@ const formData: FormData = {
   // },
 
   general_diagnosis_2_1: {},
-  // pain_2_2: {},
-  // sensitivity_2_3: {},
+  joint_diagnosis_or_contractures: {},
+  
 
 
-  limb: {},
   muscle: {},
   gait: {},
 };
