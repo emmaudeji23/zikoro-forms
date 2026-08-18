@@ -13,6 +13,7 @@ const FormOne = () => {
           
           {/* Header */}
           <header className="space-y-2">
+            <div className="flex justify-self-end "><h2 className="text-4xl text-primary font-semibold">Logo.</h2></div>
             <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
               Patient Assessment
             </h1>

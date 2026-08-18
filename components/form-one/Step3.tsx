@@ -1,4 +1,3 @@
-import React from 'react'
 import { SectionBlock } from '../shared/SectionBlock'
 import { MultiSelectPills } from '../shared/MultiSelectPills'
 import { useForm } from './FormProvider'
@@ -502,6 +501,88 @@ const Step3 = () => {
             }
           />
     </SectionBlock>
+
+    <br/>
+
+    <SectionBlock 
+      title="2.5. Volume "
+      className='sm:grid-cols-1 '
+    >
+      <SingleSelectPills
+        label='General shape of the leg'
+        value={data.volume_general_shape_of_the_leg||""}
+        onChange={(val) => updateField("general_diagnosis_2_1", "volume_general_shape_of_the_leg", val)}
+        options={[
+          { label: " normal", value: "normal" },
+          { label: "muscular", value: "muscular" },
+          { label: "hypotrophic", value: "hypotrophic" },
+          { label: "bulky", value: "bulky" },
+        ]}
+        allowOther
+        itemsStyle={'gap-y-3 gap-x-4'}
+        // containerStyle="w-72"
+      />
+
+      <div className="flex gap-x-6 gap-y-3">
+        <SingleSelectPills
+          value={data.volume_fluctuations||""}
+          onChange={(val) => updateField("general_diagnosis_2_1", "volume_fluctuations", val)}
+          options={[
+            { label: " Volume fluctuations ", value: "Volume fluctuations " },
+          ]}
+          itemsStyle={'gap-y-3 gap-x-4 w-auto'}
+          className='w-auto'
+          containerStyle='flex-1 text-nowrap'
+        />
+
+        <SingleSelectPills
+          value={data.volume_documentation_on_measurement_chart||""}
+          onChange={(val) => updateField("general_diagnosis_2_1", "volume_documentation_on_measurement_chart", val)}
+          options={[
+            { label: "Documentation on measurement chart ", value: "Documentation on measurement chart " },
+          ]}
+          itemsStyle={'gap-y-3 gap-x-4'}
+          containerStyle='  text-nowrap'
+        />
+        <SingleSelectPills
+          value={data.volume_oedema||""}
+          onChange={(val) => updateField("general_diagnosis_2_1", "volume_oedema", val)}
+          options={[
+            { label: "Oedema ", value: "Oedema " },
+          ]}
+          itemsStyle={'gap-y-3 gap-x-4'}
+          containerStyle='  text-nowrap'
+        />
+      </div>
+
+
+      <SingleSelectPills
+        label='Applied therapy'
+        value={data.volume_applied_therapy||""}
+        onChange={(val) => updateField("general_diagnosis_2_1", "volume_applied_therapy", val)}
+        options={[
+          { label: " No compression therapy", value: "No compression therapy" },
+          { label: "Compression stocking/element", value: "Compression stocking/element" },
+          { label: "Wrapping", value: "Wrapping" },
+        ]}
+        allowOther
+        itemsStyle={'gap-y-3 gap-x-4'}
+        // containerStyle="w-72"
+        className='sm:flex-col'
+      />
+
+      <TextareaField
+        label="Comments"
+        value={data?.volume_comments || ""}
+        onChange={(e: any) =>
+          updateField("general_diagnosis_2_1", "volume_comments", e.target.value)
+        }
+      />
+
+    </SectionBlock>
+
+
+
 
 
 

@@ -14,7 +14,7 @@ export const SectionBlock = ({
   children: React.ReactNode
 }) => {
   return (
-    <section className="space-y-2">
+    <section className="space-y-4">
       {heading &&  <h3 className="text-base mb-2 font-semibold tracking-tight">
           {heading}
         </h3>}

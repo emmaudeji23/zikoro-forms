@@ -135,8 +135,27 @@ export type FormData = {
 
     skin_comments?:string
 
+    // 2.5. Volume
+    volume_general_shape_of_the_leg?: string
+    volume_fluctuations?: string
+    volume_documentation_on_measurement_chart?: string
+    volume_oedema?: string
+    volume_applied_therapy?: string
+    volume_comments?: string
+
+  },
+
+  // 2.6. Joint diagnosis / contractures
+  joint_diagnosis_or_contractures: {
+    // 2.6.1. Foot type  
+    foot_malpositions: string[],
+    foot_malpositions_tendency: string,
+    toe_deformities: string[],
+    localisation: string[],
+    arthrodesis: string,
+    amputation: string[],
+    foot_type_comments: string
   }
- 
 
 }
 

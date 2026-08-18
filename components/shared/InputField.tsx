@@ -39,7 +39,7 @@ export const InputField = ({
     >
       <div
         className={cn(
-          "flex items-center gap-2 rounded border   px-3 h-11",
+          "flex items-center gap-2 rounded border border-muted-  px-3 h-11",
           "transition-all duration-200",
           "focus-within:border-primary",
           error && "border-destructive",
