@@ -5,7 +5,7 @@ import { useForm } from './FormProvider'
 
 const Step3 = () => {
   const { state, updateField } = useForm()
-  const data = state.data.health
+  const data = state.data.general_diagnosis_2_1
 
   return (
     <SectionBlock 
@@ -14,9 +14,12 @@ const Step3 = () => {
     >
       <MultiSelectPills
         label="Cause / Underlying Disease"
-        value={data.conditions || []}
+        value={data.cause_underlying_disease || []}
         onChange={(val: string[]) =>
-          updateField("health", "conditions", val)
+          updateField(
+            "general_diagnosis_2_1", 
+            "cause_underlying_disease", 
+            val)
         }
         options={[
           { label: "Apoplexy", value: "apoplexy" },

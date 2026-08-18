@@ -39,7 +39,7 @@ const initialState: FormState = {
   data: {
     basicInfo: {},
     health: {},
-    mobility: {},
+    // mobility: {},
     limb: {},
     muscle: {},
     gait: {},

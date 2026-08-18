@@ -75,9 +75,7 @@ export type FormData = {
   //   devices?: string[]
   // }
 
-  limb: Record<string, any>
-  muscle: Record<string, any>
-  gait: Record<string, any>
+
 
   // 2. Details on the affected side / on the appearance
   // 2.1. General
@@ -112,6 +110,11 @@ export type FormData = {
     comments?: string
   }
 
+  
+  // not existing yet
+  limb: Record<string, any>
+  muscle: Record<string, any>
+  gait: Record<string, any>
 
 }
 
