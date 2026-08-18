@@ -1,12 +1,11 @@
 
 /* ================= TYPES ================= */
-
 export type StepKey =
   | "basicInfo"
   | "health"
   | "general_diagnosis_2_1"
-  // | "mobility"
   | "joint_diagnosis_or_contractures"
+  // | "limb"
   | "muscle"
   | "gait"
 
@@ -68,23 +67,13 @@ export type FormData = {
     assistance?: boolean
 
     comment?: string
-}
-
-  // mobility: {
-  //   walkingDistance?: string
-  //   walkingTime?: string
-  //   devices?: string[]
-  // }
-
-  // limb: Record<string, any>
-  muscle: Record<string, any>
-  gait: Record<string, any>
+  }
 
   // 2. Details on the affected side / on the appearance
   // 2.1. General
   general_diagnosis_2_1: {
     cause_underlying_disease?: string[]
-     lesion_height?:string
+    lesion_height?:string
     diagnosis_since?: string
     functional_limitations?: string
     leg_length_discrepancy?: string
@@ -108,7 +97,6 @@ export type FormData = {
     capable_of_bearing_load?: boolean
     if_capable_of_bearing_load_ho_much?: string
     comments2_3?: string
-
 
     // 2.4. Skin 
     general_condition_of_the_skin?: string,
@@ -148,15 +136,29 @@ export type FormData = {
   // 2.6. Joint diagnosis / contractures
   joint_diagnosis_or_contractures: {
     // 2.6.1. Foot type  
-    foot_malpositions: string[],
-    foot_malpositions_tendency: string,
-    toe_deformities: string[],
-    localisation: string[],
-    arthrodesis: string,
-    amputation: string[],
-    foot_type_comments: string
+    foot_malpositions?: string[],
+    foot_malpositions_tendency?: string,
+    foot_toe_deformities?: string[],
+    foot_localisation?: string[],
+    foot_arthrodesis?: string,
+    foot_joint?: string,
+    foot_amputation?: string[],
+    foot_type_comments?: string
+
+    // 2.6.2. Ligament instability  
+    ligament_instability_left_hip?: string,
+    ligament_instability_left_Knee?: string,
+    ligament_instability_left_ankle?: string,
+
+    ligament_instability_right_hip?: string,
+    ligament_instability_right_Knee?: string,
+    ligament_instability_right_ankle?: string,
+ 
+    ligament_instability_comments?: string
   }
 
+  "muscle":{}
+  "gait":{}
 }
 
 export type FormState = {

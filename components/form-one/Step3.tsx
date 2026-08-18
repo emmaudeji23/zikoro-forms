@@ -3,18 +3,15 @@ import { MultiSelectPills } from '../shared/MultiSelectPills'
 import { useForm } from './FormProvider'
 import { InputField, InputFieldLine } from '../shared/InputField'
 import { TextareaField } from '../shared/TextareaField'
-import { Separator } from 'radix-ui'
 import { SingleSelectPills } from '../shared/SingleSelectPills'
 import { Label } from '../ui/label'
 
 const Step3 = () => {
   const { state, updateField } = useForm()
-  const data = state.data.general_diagnosis_2_1
+  const data = state.data?.general_diagnosis_2_1
 
   return (
-
     <>
-
     <SectionBlock 
       heading="2. Details on the affected side / on the appearance"
       title="2.1. General"
@@ -137,7 +134,7 @@ const Step3 = () => {
       <div className="grid grid-cols-2 gap-y-3 gap-x-6">
         <SingleSelectPills
           label="Warm / cold sensitivity "
-          value={data.warm_or_cold_sensitivity||""}
+          value={data?.warm_or_cold_sensitivity||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "warm_or_cold_sensitivity", val)}
           options={[
             { label: "normal", value: "normal" },
@@ -150,7 +147,7 @@ const Step3 = () => {
 
         <SingleSelectPills
           label="Sharp / dull sensitivity  "
-          value={data.sharp_or_dull_sensitivity||""}
+          value={data?.sharp_or_dull_sensitivity||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "sharp_or_dull_sensitivity", val)}
           options={[
             { label: "normal", value: "normal" },
@@ -161,7 +158,7 @@ const Step3 = () => {
 
         <SingleSelectPills
           label="Pressure intensity   "
-          value={data.preasure_sensitivity||""}
+          value={data?.preasure_sensitivity||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "preasure_sensitivity", val)}
           options={[
             { label: "normal", value: "normal" },
@@ -173,7 +170,7 @@ const Step3 = () => {
 
         <SingleSelectPills
           label="Pressure localisation   "
-          value={data.preasure_localisation||""}
+          value={data?.preasure_localisation||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "preasure_localisation", val)}
           options={[
             { label: "normal", value: "normal" },
@@ -189,7 +186,7 @@ const Step3 = () => {
         <div className="flex-1 space-y-4">
 
             <SingleSelectPills
-              value={data.capable_of_contact||""}
+              value={data?.capable_of_contact||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "capable_of_contact", val)}
               options={[
                 { label: "  capable of contact ", value: "  capable of contact " },
@@ -198,7 +195,7 @@ const Step3 = () => {
             />
 
             <SingleSelectPills
-              value={data.capable_of_bearing_load||""}
+              value={data?.capable_of_bearing_load||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "capable_of_bearing_load", val)}
               options={[
                 { label: "  capable of bearing load ", value: "  capable of bearing load " },
@@ -209,7 +206,7 @@ const Step3 = () => {
             
             <SingleSelectPills
               label="If capable of bearing load, how much?  "
-              value={data.preasure_localisation||""}
+              value={data?.preasure_localisation||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "preasure_localisation", val)}
               options={[
                 { label: "fully", value: "fully" },
@@ -255,7 +252,7 @@ const Step3 = () => {
           <Label>General condition of the skin  </Label>
           <div className="flex-1 space-y-2">
               <SingleSelectPills
-                value={data.general_condition_of_the_skin||""}
+                value={data?.general_condition_of_the_skin||""}
                 onChange={(val) => updateField("general_diagnosis_2_1", "general_condition_of_the_skin", val)}
                 options={[
                   { label: "normal", value: "normal" },
@@ -289,7 +286,7 @@ const Step3 = () => {
         <div className="space-y-3">
           <SingleSelectPills
             // label='Skin colour'
-            value={data.skin_colour||""}
+            value={data?.skin_colour||""}
             onChange={(val) => updateField("general_diagnosis_2_1", "skin_colour", val)}
             options={[
               { label: "normal", value: "normal" },
@@ -312,7 +309,7 @@ const Step3 = () => {
         <div className="space-y-3">
             <SingleSelectPills
               // label='Skin colour'
-              value={data.skin_temperature||""}
+              value={data?.skin_temperature||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "skin_temperature", val)}
               options={[
                 { label: "normal", value: "normal" },
@@ -346,7 +343,7 @@ const Step3 = () => {
         <div className="space-y-3">
             <SingleSelectPills
               // label='Skin colour'
-              value={data.skin_soft_tissue_coverage||""}
+              value={data?.skin_soft_tissue_coverage||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "skin_soft_tissue_coverage", val)}
               options={[
                 { label: "normal", value: "normal" },
@@ -380,7 +377,7 @@ const Step3 = () => {
         <div className="space-y-3">
             <SingleSelectPills
               // label='Skin colour'
-              value={data.skin_subcataneous_tissue||""}
+              value={data?.skin_subcataneous_tissue||""}
               onChange={(val) => updateField("general_diagnosis_2_1", "skin_subcataneous_tissue", val)}
               options={[
                 { label: "normal", value: "normal" },
@@ -409,7 +406,7 @@ const Step3 = () => {
 
       <div className="flex gap-6">
         <SingleSelectPills
-          value={data.skin_replacement_tissue||""}
+          value={data?.skin_replacement_tissue||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "skin_replacement_tissue", val)}
           options={[
             { label: " Replacement tissue", value: " Replacement tissue" },
@@ -430,7 +427,7 @@ const Step3 = () => {
 
       <div className="flex gap-6">
         <SingleSelectPills
-          value={data.skin_pressure_chafing_spots||""}
+          value={data?.skin_pressure_chafing_spots||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "skin_pressure_chafing_spots", val)}
           options={[
             { label: "Pressure / Chafing spots ", value: "Pressure / Chafing spots " },
@@ -451,7 +448,7 @@ const Step3 = () => {
 
       <div className="flex gap-6">
         <SingleSelectPills
-          value={data.skin_edge_scarring||""}
+          value={data?.skin_edge_scarring||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "skin_edge_scarring", val)}
           options={[
             { label: " Edge scarring   ", value: " Edge scarring   " },
@@ -473,7 +470,7 @@ const Step3 = () => {
 
    <div className="flex gap-6">
         <SingleSelectPills
-          value={data.skin_scars||""}
+          value={data?.skin_scars||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "skin_scars", val)}
           options={[
             { label: "Scars  ", value: "Scars" },
@@ -510,7 +507,7 @@ const Step3 = () => {
     >
       <SingleSelectPills
         label='General shape of the leg'
-        value={data.volume_general_shape_of_the_leg||""}
+        value={data?.volume_general_shape_of_the_leg||""}
         onChange={(val) => updateField("general_diagnosis_2_1", "volume_general_shape_of_the_leg", val)}
         options={[
           { label: " normal", value: "normal" },
@@ -525,7 +522,7 @@ const Step3 = () => {
 
       <div className="flex gap-x-6 gap-y-3">
         <SingleSelectPills
-          value={data.volume_fluctuations||""}
+          value={data?.volume_fluctuations||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "volume_fluctuations", val)}
           options={[
             { label: " Volume fluctuations ", value: "Volume fluctuations " },
@@ -536,7 +533,7 @@ const Step3 = () => {
         />
 
         <SingleSelectPills
-          value={data.volume_documentation_on_measurement_chart||""}
+          value={data?.volume_documentation_on_measurement_chart||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "volume_documentation_on_measurement_chart", val)}
           options={[
             { label: "Documentation on measurement chart ", value: "Documentation on measurement chart " },
@@ -545,7 +542,7 @@ const Step3 = () => {
           containerStyle='  text-nowrap'
         />
         <SingleSelectPills
-          value={data.volume_oedema||""}
+          value={data?.volume_oedema||""}
           onChange={(val) => updateField("general_diagnosis_2_1", "volume_oedema", val)}
           options={[
             { label: "Oedema ", value: "Oedema " },
@@ -558,7 +555,7 @@ const Step3 = () => {
 
       <SingleSelectPills
         label='Applied therapy'
-        value={data.volume_applied_therapy||""}
+        value={data?.volume_applied_therapy||""}
         onChange={(val) => updateField("general_diagnosis_2_1", "volume_applied_therapy", val)}
         options={[
           { label: " No compression therapy", value: "No compression therapy" },
