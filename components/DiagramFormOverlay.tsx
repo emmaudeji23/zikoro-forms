@@ -136,12 +136,12 @@ interface MuscleField extends DiagramField {
 
 const MUSCLE_FIELDS: MuscleField[] = [
   // Right leg
-  { id: "r-hip-flexor", label: "Hip flexor", side: "right", top: 16, left: 44, align: "start" },
-  { id: "r-hip-extensor", label: "Hip extensor", side: "right", top: 18, left: 4, align: "start" },
-  { id: "r-knee-extensor", label: "Knee extensor", side: "right", top: 33, left: 44, align: "start" },
-  { id: "r-knee-flexor", label: "Knee flexor", side: "right", top: 36, left: 4, align: "start" },
-  { id: "r-dorsal-flexor", label: "Dorsal flexor", side: "right", top: 60, left: 44, align: "start" },
-  { id: "r-dorsal-extensor", label: "Dorsal extensor", side: "right", top: 56, left: 4, align: "start" },
+  // { id: "r-hip-flexor", label: "Hip flexor", side: "right", top: 16, left: 44, align: "start" },
+  // { id: "r-hip-extensor", label: "Hip extensor", side: "right", top: 18, left: 4, align: "start" },
+  // { id: "r-knee-extensor", label: "Knee extensor", side: "right", top: 33, left: 44, align: "start" },
+  // { id: "r-knee-flexor", label: "Knee flexor", side: "right", top: 36, left: 4, align: "start" },
+  // { id: "r-dorsal-flexor", label: "Dorsal flexor", side: "right", top: 60, left: 44, align: "start" },
+  // { id: "r-dorsal-extensor", label: "Dorsal extensor", side: "right", top: 56, left: 4, align: "start" },
 
   // Left leg
   { id: "l-hip-flexor", label: "Hip flexor", side: "left", top: 16, left: 53, align: "end" },
